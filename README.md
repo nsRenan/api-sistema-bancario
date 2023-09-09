@@ -17,7 +17,8 @@ Esta é uma API para um banco digital que permite a gestão de contas bancárias
 
 1. Clone o repositório.
 2. Instale as dependências com `npm install`.
-5. Inicie o servidor com `npm run dev`.
+3. Inicie o servidor com `npm run dev`.
+4. Acesse `http://localhost:3000/`
 
 
 
@@ -29,6 +30,8 @@ Esta é uma API para um banco digital que permite a gestão de contas bancárias
 GET /contas?senha_banco=Cubos123Bank
 ```
 É obrigatório a senha do banco para a listagem das contas cadastradas.
+
+![Listar Contas](https://github.com/nsRenan/api-sistema-bancario/blob/master/screenshots/listarContas.png)
 
 
 **Criar Conta**
@@ -46,6 +49,7 @@ Exemplo de requisição:
     "senha": "12345"
 }
 ```
+
 
 **Atualizar Dados**
 ```http
@@ -66,6 +70,7 @@ PUT /contas/1/usuario
 }
 ```
 
+
 **Deletar Conta**
 ```http
 DELETE /contas/:numeroConta
@@ -74,6 +79,7 @@ Exemplo de requisição:
 ```http
 DELETE /contas/1
 ```
+![Deletar Conta](https://github.com/nsRenan/api-sistema-bancario/blob/master/screenshots/deletarConta.png)
 
 **Depositar**
 ```http
@@ -86,6 +92,8 @@ Exemplo de requisição:
 	"valor": 30000
 }
 ```
+
+
 **Sacar**
 ```http
 POST /transacoes/sacar
@@ -98,6 +106,8 @@ Exemplo de requisição:
     	"senha": "1234665"
 }
 ```
+![Sacar](https://github.com/nsRenan/api-sistema-bancario/blob/master/screenshots/sacar.png)
+
 **Transferir**
 ```http
 POST /transacoes/transferir
@@ -111,6 +121,7 @@ Exemplo de requisição:
 	"senha": "12345"
 }
 ```
+![Transferir](https://github.com/nsRenan/api-sistema-bancario/blob/master/screenshots/transferir.png)
 
 **Exibir Saldo**
 ```http
@@ -120,6 +131,8 @@ Exemplo de requisição:
 ```http
 GET /contas/saldo?numero_conta=1&senha=12345
 ```
+![Saldo](https://github.com/nsRenan/api-sistema-bancario/blob/master/screenshots/exibirSaldo.png)
+
 **Exibir Extrato**
 ```http
 GET /contas/extrato?numero_conta&senha
@@ -128,5 +141,7 @@ Exemplo de requisição:
 ```http
 GET /contas/extrato?numero_conta=1&senha=12345
 ```
+![Extrato](https://github.com/nsRenan/api-sistema-bancario/blob/master/screenshots/exibirExtrato.png)
+
 
 ---
